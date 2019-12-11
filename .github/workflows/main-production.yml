@@ -33,7 +33,7 @@ jobs:
           name: build
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
-        with:
-          args: deploy use kanban-doc-prod-82bbc
+      - name: deploy
+        run: firebase deploy use kanban-doc-prod-82bbc
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
